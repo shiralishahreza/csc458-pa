@@ -1,7 +1,7 @@
 #!/bin/bash
 
-WEB_HASH=`${1}/src/webget cs144.keithw.org /nph-hasher/xyzzy | tee /dev/stderr | tail -n 1`
-CORRECT_HASH="7SmXqWkrLKzVBCEalbSPqBcvs11Pw263K7x4Wv3JckI"
+WEB_HASH=`${1}/src/webget httpbin.org /base64/SGVsbG93IHdvcmxk | tee /dev/stderr | tail -n 1`
+CORRECT_HASH="Hellow world"
 
 if [ "${WEB_HASH}" != "${CORRECT_HASH}" ]; then
     echo ERROR: webget returned output that did not match the test\'s expectations
