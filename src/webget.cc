@@ -28,7 +28,7 @@ int main( int argc, char* argv[] )
     // itself, so arg count = 3 in total).
     if ( argc != 3 ) {
       cerr << "Usage: " << args.front() << " HOST PATH\n";
-      cerr << "\tExample: " << args.front() << " stanford.edu /class/cs144\n";
+      cerr << "\tExample: " << args.front() << " api.ipify.org /\n";
       return EXIT_FAILURE;
     }
 
