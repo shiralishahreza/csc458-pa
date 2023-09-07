@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.24.2)
 
-project(minnow CXX)
+project(csc458 CXX)
 
 if(${CMAKE_GENERATOR} STREQUAL "Unix Makefiles")
   set(CMAKE_MAKE_PROGRAM "${PROJECT_SOURCE_DIR}/scripts/make-parallel.sh" CACHE STRING "" FORCE)
@@ -21,6 +21,5 @@ include_directories("${PROJECT_SOURCE_DIR}/src")
 add_subdirectory("${PROJECT_SOURCE_DIR}/util")
 add_subdirectory("${PROJECT_SOURCE_DIR}/src")
 add_subdirectory("${PROJECT_SOURCE_DIR}/tests")
-add_subdirectory("${PROJECT_SOURCE_DIR}/apps")
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)

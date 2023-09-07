@@ -6,7 +6,7 @@
 
 // https://stackoverflow.com/questions/33399594/making-a-user-defined-class-stdto-stringable
 
-namespace minnow_conversions {
+namespace csc458_conversions {
 using std::to_string;
 
 template<typename T>
@@ -24,10 +24,10 @@ std::string as_string( T&& t )
 {
   return to_string( std::forward<T>( t ) );
 }
-} // namespace minnow_conversions
+} // namespace csc458_conversions
 
 template<typename T>
 std::string to_string( T&& t )
 {
-  return minnow_conversions::as_string( std::forward<T>( t ) );
+  return csc458_conversions::as_string( std::forward<T>( t ) );
 }
