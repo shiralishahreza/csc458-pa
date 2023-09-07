@@ -9,6 +9,7 @@ using namespace std;
 
 void get_URL( const string& host, const string& path )
 {
+  // Update here with your code!
   cerr << "Function called: get_URL(" << host << ", " << path << ")\n";
   cerr << "Warning: get_URL() has not been implemented yet.\n";
 }
