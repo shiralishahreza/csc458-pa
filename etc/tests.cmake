@@ -21,4 +21,8 @@ add_custom_target (pa0 COMMAND ${CMAKE_CTEST_COMMAND} --output-on-failure --stop
 
 ttest(net_interface)
 
+ttest(router)
+
 add_custom_target (pa1 COMMAND ${CMAKE_CTEST_COMMAND} --output-on-failure --stop-on-failure --timeout 12 -R '^net_interface')
+
+add_custom_target (pa2 COMMAND ${CMAKE_CTEST_COMMAND} --output-on-failure --stop-on-failure --timeout 12 -R '^net_interface|^router')

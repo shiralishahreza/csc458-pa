@@ -23,3 +23,5 @@ endmacro(add_test_exec)
 
 add_test_exec(net_interface)
 
+add_test_exec(router)
+
