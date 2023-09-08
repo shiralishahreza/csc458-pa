@@ -6,7 +6,9 @@ import re
 import sys
 
 base = sys.argv[1] if len(sys.argv) > 1 else '.'
-modules = [['webget.cc', 'WebGet']]
+modules = [['webget.cc', 'WebGet'],
+           [['network_interface.cc', 'NetworkInterface Header'],
+           [['network_interface.hh', 'NetworkInterface Source']]
 longest_module_length = max([len(x[1]) for x in modules])
 
 
