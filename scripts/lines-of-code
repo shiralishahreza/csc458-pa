@@ -6,10 +6,7 @@ import re
 import sys
 
 base = sys.argv[1] if len(sys.argv) > 1 else '.'
-modules = [['byte_stream', 'ByteStream'],
-           ['reassembler', 'Reassembler'],
-           ['tcp_receiver', 'TCPReceiver'],
-           ['tcp_sender', 'TCPSender']]
+modules = [['webget.cc', 'WebGet']]
 longest_module_length = max([len(x[1]) for x in modules])
 
 
@@ -29,8 +26,7 @@ else:
 
 
 for i in modules:
-    x = count_lines(i[0] + '.hh')
-    y = count_lines(i[0] + '.cc')
+    x = count_lines(i[0])
     spacing = longest_module_length - len(i[1])
     tty.write('%s%s:%s%5d lines of code\n'
-              % (' ' * 13, i[1], ' ' * spacing, x + y))
+              % (' ' * 13, i[1], ' ' * spacing, x))
