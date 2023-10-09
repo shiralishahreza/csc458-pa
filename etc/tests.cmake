@@ -19,3 +19,6 @@ set_property(TEST t_webget PROPERTY FIXTURES_REQUIRED compile)
 
 add_custom_target (pa0 COMMAND ${CMAKE_CTEST_COMMAND} --output-on-failure --stop-on-failure --timeout 12 -R 'webget')
 
+ttest(net_interface)
+
+add_custom_target (pa1 COMMAND ${CMAKE_CTEST_COMMAND} --output-on-failure --stop-on-failure --timeout 12 -R '^net_interface')
