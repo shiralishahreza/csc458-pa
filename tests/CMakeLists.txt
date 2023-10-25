@@ -21,5 +21,10 @@ macro(add_test_exec exec_name)
   add_dependencies(functionality_testing "${exec_name}")
 endmacro(add_test_exec)
 
-add_test_exec(net_interface)
+add_test_exec(net_interface_test_typical)
+add_test_exec(net_interface_test_reply)
+add_test_exec(net_interface_test_learn)
+add_test_exec(net_interface_test_pending)
+add_test_exec(net_interface_test_expiry)
+add_test_exec(net_interface_test_independence)
 
