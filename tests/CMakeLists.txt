@@ -28,5 +28,10 @@ add_test_exec(net_interface_test_pending)
 add_test_exec(net_interface_test_expiry)
 add_test_exec(net_interface_test_independence)
 
-add_test_exec(router)
+add_test_exec(router_2hosts_1)
+add_test_exec(router_2hosts_2)
+add_test_exec(router_internet)
+add_test_exec(router_hs_network)
+add_test_exec(router_same_network)
+add_test_exec(router_ttl)
 

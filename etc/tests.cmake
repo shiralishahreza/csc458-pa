@@ -26,8 +26,14 @@ ttest(net_interface_test_pending)
 ttest(net_interface_test_expiry)
 ttest(net_interface_test_independence)
 
-ttest(router)
+ttest(router_2hosts_1)
+ttest(router_2hosts_2)
+ttest(router_internet)
+ttest(router_hs_network)
+ttest(router_same_network)
+ttest(router_ttl)
+
 
 add_custom_target (pa1 COMMAND ${CMAKE_CTEST_COMMAND} --output-on-failure --continue-on-failure --timeout 12 -R '^net_interface')
 
-add_custom_target (pa2 COMMAND ${CMAKE_CTEST_COMMAND} --output-on-failure --continue-on-failure --timeout 12 -R '^net_interface|^router')
+add_custom_target (pa2 COMMAND ${CMAKE_CTEST_COMMAND} --output-on-failure --continue-on-failure --timeout 12 -R '^router')
