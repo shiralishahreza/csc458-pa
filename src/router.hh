@@ -12,6 +12,7 @@
 // implementation of NetworkInterface.
 class AsyncNetworkInterface : public NetworkInterface
 {
+  AsyncNetworkInterface(const AsyncNetworkInterface&) = delete;
   std::queue<InternetDatagram> datagrams_in_ {};
 
 public:
@@ -61,7 +62,7 @@ public:
   // returns the index of the interface after it has been added to the router
   size_t add_interface( AsyncNetworkInterface&& interface )
   {
-    interfaces_.push_back( std::move( interface ) );
+    interfaces_.push_back( std::forward<AsyncNetworkInterface>( interface ) );
     return interfaces_.size() - 1;
   }
 
